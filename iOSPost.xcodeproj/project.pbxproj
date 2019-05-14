@@ -8,20 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		02B5C5A3228A007B00E83B39 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B5C5A2228A007B00E83B39 /* AppDelegate.swift */; };
-		02B5C5A5228A007B00E83B39 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B5C5A4228A007B00E83B39 /* ViewController.swift */; };
 		02B5C5A8228A007B00E83B39 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 02B5C5A6228A007B00E83B39 /* Main.storyboard */; };
 		02B5C5AA228A007B00E83B39 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 02B5C5A9228A007B00E83B39 /* Assets.xcassets */; };
 		02B5C5AD228A007B00E83B39 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 02B5C5AB228A007B00E83B39 /* LaunchScreen.storyboard */; };
+		02B5C5B6228A01EF00E83B39 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B5C5B5228A01EF00E83B39 /* Post.swift */; };
+		02B5C5B8228A02D600E83B39 /* PostController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B5C5B7228A02D600E83B39 /* PostController.swift */; };
+		02B5C5BA228A112C00E83B39 /* PostTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B5C5B9228A112C00E83B39 /* PostTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		02B5C59F228A007B00E83B39 /* iOSPost.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSPost.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		02B5C5A2228A007B00E83B39 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		02B5C5A4228A007B00E83B39 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		02B5C5A7228A007B00E83B39 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		02B5C5A9228A007B00E83B39 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		02B5C5AC228A007B00E83B39 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		02B5C5AE228A007C00E83B39 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		02B5C5B5228A01EF00E83B39 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		02B5C5B7228A02D600E83B39 /* PostController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostController.swift; sourceTree = "<group>"; };
+		02B5C5B9228A112C00E83B39 /* PostTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +58,24 @@
 		02B5C5A1228A007B00E83B39 /* iOSPost */ = {
 			isa = PBXGroup;
 			children = (
-				02B5C5A2228A007B00E83B39 /* AppDelegate.swift */,
-				02B5C5A4228A007B00E83B39 /* ViewController.swift */,
+				02B5C5B4228A009300E83B39 /* Resources */,
 				02B5C5A6228A007B00E83B39 /* Main.storyboard */,
+				02B5C5B5228A01EF00E83B39 /* Post.swift */,
+				02B5C5B7228A02D600E83B39 /* PostController.swift */,
+				02B5C5B9228A112C00E83B39 /* PostTableViewController.swift */,
+			);
+			path = iOSPost;
+			sourceTree = "<group>";
+		};
+		02B5C5B4228A009300E83B39 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				02B5C5A2228A007B00E83B39 /* AppDelegate.swift */,
 				02B5C5A9228A007B00E83B39 /* Assets.xcassets */,
 				02B5C5AB228A007B00E83B39 /* LaunchScreen.storyboard */,
 				02B5C5AE228A007C00E83B39 /* Info.plist */,
 			);
-			path = iOSPost;
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,8 +149,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				02B5C5A5228A007B00E83B39 /* ViewController.swift in Sources */,
 				02B5C5A3228A007B00E83B39 /* AppDelegate.swift in Sources */,
+				02B5C5B6228A01EF00E83B39 /* Post.swift in Sources */,
+				02B5C5B8228A02D600E83B39 /* PostController.swift in Sources */,
+				02B5C5BA228A112C00E83B39 /* PostTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -283,7 +299,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = iOSPost/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/iOSPost/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -300,7 +316,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = iOSPost/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/iOSPost/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
